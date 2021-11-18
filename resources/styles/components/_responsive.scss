@@ -1,0 +1,41 @@
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: ($tablet)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+%pc-only {
+  @media (max-width: ($tablet)) {
+    display: none !important;
+  }
+}
+
+%sp-only {
+  @media (min-width: ($tablet + 1px)) {
+    display: none !important;
+  }
+}
+
+.pc-only {
+  @extend %pc-only;
+}
+
+.sp-only {
+  @extend %sp-only;
+}
+
+.pc_only {
+  @media (max-width: ($tablet)) {
+    display: none !important;
+  }
+}

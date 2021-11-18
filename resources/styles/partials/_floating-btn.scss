@@ -1,0 +1,39 @@
+.floating-btn {
+
+    &__totop {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 100;
+        display: none;
+
+        @include tablet {
+            bottom: 4rem;
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        z-index: 5;
+
+        @include tablet {
+            display: none;
+        }
+
+        &--sp {
+            display: none;
+
+            @include tablet {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 5;
+                display: flex;
+                color: white;
+            }
+
+        }
+    }
+}

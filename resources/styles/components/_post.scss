@@ -1,0 +1,123 @@
+.post-list {
+    display: flex;
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
+}
+
+.post-item {
+    max-width: calc(100% / 3 - 1rem);
+    width: 100%;
+    margin: 0 0.5rem 1rem 0.5rem;
+    background-color: white;
+
+    @include tablet {
+        max-width: calc( 100% - 1rem );
+        margin: 0.5rem;
+    }
+
+    &__thumbnail {
+        padding-top: 75%;
+        height: 285px;
+        transition: transform 0.5s ease;
+        @include bg-center();
+
+        &--simple {
+            padding-top: 70%;
+            transition: transform 0.5s ease;
+            height: 230px;
+            @include bg-center();
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    &__category {
+        padding: 3px 13px;
+        color: white;
+        background-color: #097c25;
+    }
+
+    &__datetime {
+        color: #ccc;
+    }
+}
+
+// Archive...
+.post {
+
+    &-content {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-archive {
+        max-width: 760px;
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        &__thumbnail {
+            width: 200px;
+            height: 200px;
+            padding-top: 100%;
+            @include bg-center();
+
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            @include tablet {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    }
+
+    &-sidebar {
+        max-width: calc( 100% - 760px );
+        width: 100%;
+        margin-left: 2rem;
+
+        @include tablet {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        .post-archive__thumbnail {
+            width: 100%;
+            height: initial;
+        }
+
+        &__item {
+            border-bottom: 2px solid #ccc;
+
+            &:last-child {
+                border-bottom: initial;
+            }
+        }
+    }
+
+}

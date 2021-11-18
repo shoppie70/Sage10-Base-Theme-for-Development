@@ -1,0 +1,63 @@
+.drawer-hamburger,
+.drawer-nav {
+
+    z-index: 555;
+    -webkit-transition: all 1s cubic-bezier(.19, 1, .22, 1);
+    transition: all 1s cubic-bezier(.19, 1, .22, 1);
+    -webkit-transform: translateZ(0);
+
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+    background-color: #E281B2;
+}
+
+
+.drawer--right .drawer-nav {
+    -webkit-transition: right 1s cubic-bezier(.19, 1, .22, 1);
+    transition: right 1s cubic-bezier(.19, 1, .22, 1);
+}
+
+
+.drawer {
+
+    &-hamburger {
+        top: 4px;
+    }
+
+    &-overlay {
+        z-index: 7;
+    }
+
+    &__logo {
+        background-color: white;
+        padding: 3rem 2rem;
+    }
+
+    &-nav {
+        background-color: #f3f3f3;
+        overflow-y:scroll!important;
+    }
+
+    &__menu {
+        margin-top: 2rem;
+        text-align: center;
+
+        &--item {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__company {
+        margin-top: 3rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+}

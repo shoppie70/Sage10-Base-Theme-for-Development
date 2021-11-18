@@ -1,0 +1,31 @@
+//@import 'tailwindcss/base';
+
+@import 'common/global';
+
+//@import 'tailwindcss/components';
+//@import 'tailwindcss/utilities';
+
+@import "components/variables";
+@import "components/responsive";
+
+@import "components/btn";
+@import "components/component";
+@import "components/heading";
+@import "components/mixin";
+@import "components/post";
+
+@import 'partials/header';
+@import "partials/footer";
+@import "partials/topnav";
+@import "partials/drawer";
+@import "partials/floating-btn";
+@import "partials/breadcrumb";
+@import "partials/pagenation";
+
+// pages
+@import "pages/front";
+@import "pages/gallery";
+@import "pages/staff";
+@import "pages/plan";
+@import "pages/contact";
+@import "pages/covid";

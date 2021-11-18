@@ -1,0 +1,53 @@
+.btn {
+    padding: 0.75rem 0;
+    display: inline-block;
+    max-width: 270px;
+    width: 100%;
+    text-align: center;
+
+    &-primary {
+        @extend .btn;
+        color: white;
+        background-color: $color-primary;
+    }
+
+    &-secondary {
+        @extend .btn;
+        color: black;
+        border: 1px solid black;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+    &-select {
+        background-color: rgb(242, 242, 242);
+        border-radius: 6px;
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        display: block;
+        margin: 0.5rem;
+
+        &--active {
+            @extend .btn-select;
+            color: white;
+            background-color: #f7aeb0;
+        }
+    }
+
+    &-covid {
+        @extend .btn;
+        max-width: 350px;
+        background-color: #7ecef4;
+        color: black;
+    }
+
+    &-nav {
+        @extend .btn;
+        background-color: #ff485d;
+        color: white;
+    }
+
+}
