@@ -12,9 +12,11 @@ namespace App;
  */
 function asset(string $file_name = null): string
 {
+    $directory_path = WP_DEBUG ? '/resources/' : '/public/';
+
     if ($file_name) {
-        $url = esc_url(get_template_directory_uri() . '/resources/' . $file_name);
-        $path = get_template_directory() . '/resources/' . $file_name;
+        $url = esc_url(get_template_directory_uri() . $directory_path . $file_name);
+        $path = get_template_directory() . $directory_path . $file_name;
 
         if( file_exists($path )) {
             return $url . '?v=' . filemtime($path);
